@@ -3,8 +3,8 @@ import { PRODUCT_CATEGORIES, DISPLAY_CATEGORIES } from "../../constants/constant
 describe("PRODUCT_CATEGORIES", () => {
   test("should contain correct keys and values", () => {
     expect(PRODUCT_CATEGORIES).toEqual({
-      MENS_CLOTHING: "MENS_CLOTHING",
-      WOMENS_CLOTHING: "WOMENS_CLOTHING",
+      MENS_CLOTHING: "men's clothing",
+      WOMENS_CLOTHING: "women's clothing",
     });
   });
 

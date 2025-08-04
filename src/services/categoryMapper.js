@@ -1,7 +1,7 @@
 import {
   PRODUCT_CATEGORIES,
   DISPLAY_CATEGORIES,
-} from "@/constants/constantCategory";
+} from "../constants/constantCategory";
 
 export const toDisplay = (categoryFromApi) => {
   const categoryMatch = {

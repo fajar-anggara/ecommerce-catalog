@@ -1,4 +1,4 @@
-# ProductDisplay Component
+# Ecommerce catalogue
 
 Aplikasi Vue.js untuk menampilkan katalog product men's clothing dan woman's clothing
 
