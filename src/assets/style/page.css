@@ -1,0 +1,523 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --color-border-light: #ddd;
+    --color-primary: #002772;
+    --color-desc-text: #1E1E1E;
+    --color-secondary-text: #3F3F3F;
+    --color-upper-background: #D6E6FF;
+    --color-bottom-background: #FFFF;
+    --color-white: #FFFFFF;
+
+    /* Skeleton */
+    --color-skeleton-placeholder: #f0f0f0;
+    --color-skeleton-highlight: #e0e0e0;
+}
+
+.MENS_CLOTHING {
+    --color-primary: #002772;
+    --color-desc-text: #1E1E1E;
+    --color-upper-background: #D6E6FF;
+    --color-bottom-background: #FFFF;
+}
+
+.WOMENS_CLOTHING {
+    --color-primary: #720060;
+    --color-desc-text: #1E1E1E;
+    --color-upper-background: #FDE2FF;
+    --color-bottom-background: #FFFF;
+}
+
+.UNAVAILABLE {
+    --color-primary: #3F3F3F;
+    --color-desc-text: #1E1E1E;
+    --color-upper-background: #DCDCDC;
+    --color-bottom-background: #FFFF;
+}
+
+/* BACKGROUND */
+.background {
+    background-color: var(--color-upper-background);
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.background::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: var(--color-bottom-background);
+    z-index: 0;
+}
+
+.center-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.product-card {
+    background: var(--color-bottom-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+.image-section {
+    padding: 5rem 2.5rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.info-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section {
+    margin-bottom: 1rem;
+}
+
+.title-rating-section {
+    text-align: left;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.product-title {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5em;
+    transition: color 0.4s ease-in-out;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    transition: color 0.4s ease-in-out;
+}
+
+.category {
+    color: var(--color-secondary-text);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-value {
+    color: var(--color-secondary-text);
+    font-size: 1.2rem;
+}
+
+.stars {
+    color: var(--color-primary);
+    display: flex;
+    gap: 6px;
+}
+
+.circle {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.circle.filled {
+    background-color: var(--color-primary);
+}
+
+.circle.empty {
+    border: 2px solid var(--color-primary);
+    background-color: transparent;
+}
+
+.description-section {
+    padding-top: 0.5rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: var(--color-desc-text);
+    line-height: 1.6;
+    transition: color 0.4s ease-in-out;
+}
+
+.action-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+    border-top: 1px solid var(--color-border-light);
+    margin-top: 0.8rem;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+    transition: color 0.4s ease-in-out;
+}
+
+.actions {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+}
+
+button {
+    flex: 1;
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out, border-color 0.4s ease-in-out, transform 0.3s ease-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.buy-now {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.next-product {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .meta-row {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+    }
+
+    .action-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .info-sections {
+        padding: 1.5rem;
+    }
+}
+
+/* ====================================
+    SKELETON LOADING
+    ==================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.product-card.skeleton-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-loading .product-image {
+    opacity: 0;
+    transition: none;
+}
+
+.skeleton-loading .circle {
+    opacity: 0;
+    transition: none;
+}
+
+.skeleton-loading .meta-row,
+.skeleton-loading .rating-value,
+.skeleton-loading .category {
+    display: none;
+}
+
+.skeleton-loading .image-section,
+.skeleton-loading .product-title,
+.skeleton-loading .description,
+.skeleton-loading .price,
+.skeleton-loading .actions button {
+    background-color: var(--color-skeleton-placeholder);
+    background-size: 200% 100%;
+    background-image: linear-gradient(90deg,
+    var(--color-skeleton-placeholder) 0%,
+    var(--color-skeleton-highlight) 20%,
+    var(--color-skeleton-placeholder) 40%);
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 4px;
+    transition: none;
+}
+
+.skeleton-loading .title-rating-section::after {
+    content: '';
+    display: block;
+    height: 1.2rem;
+    width: 60%;
+    background-color: var(--color-skeleton-placeholder);
+    background-size: 200% 100%;
+    background-image: linear-gradient(90deg,
+    var(--color-skeleton-placeholder) 0%,
+    var(--color-skeleton-highlight) 20%,
+    var(--color-skeleton-placeholder) 40%);
+    animation: shimmer 1.5s infinite linear;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+}
+
+.skeleton-loading .image-section {
+    position: relative;
+    background-color: var(--color-skeleton-placeholder);
+}
+
+.skeleton-loading .product-title {
+    height: 2.5rem;
+    width: 80%;
+    color: transparent;
+    margin-bottom: 0.5em;
+}
+
+.skeleton-loading .description {
+    height: 4rem;
+    color: transparent;
+    line-height: 1.6;
+}
+
+.skeleton-loading .price {
+    height: 2rem;
+    width: 40%;
+    color: transparent;
+}
+
+.skeleton-loading .actions button {
+    border: none;
+    height: 2.5rem;
+    color: transparent;
+}
+
+/* ====================================
+    UNAVAILABLE PRODUCT STYLES
+    ==================================== */
+
+.unavailable-card {
+    background: white;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unavailable-overlay {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.not-found-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+    object-fit: contain;
+    transition: transform 0.3s ease-out;
+}
+
+.not-found-icon:hover {
+    transform: scale(1.1);
+}
+
+.unavailable-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--color-desc-text);
+}
+
+.unavailable-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.unavailable-buttons button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.notify-btn {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.notify-btn:hover {
+    background: #003a8a;
+    transform: scale(1.05);
+}
+
+.center-wrapper.hidden {
+    display: none;
+}
+
+.toggle-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: all 0.3s ease, transform 0.3s ease-out;
+    color: var(--color-primary);
+}
+
+.toggle-btn:hover {
+    background: var(--color-white);
+    transform: scale(1.05);
+}
+
+.toggle-btn.active {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .unavailable-overlay {
+        padding: 1.5rem;
+    }
+
+    .not-found-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+
+    .unavailable-text {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .unavailable-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .unavailable-buttons button {
+        width: 100%;
+    }
+
+    .toggle-controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    .toggle-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-left: 5px;
+    }
+}

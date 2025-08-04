@@ -1,4 +1,4 @@
-export const rating = (apiRating) => {
+export const getRating = (apiRating) => {
   if (!apiRating || typeof apiRating.rate !== "number") {
     return {
       star: 0,

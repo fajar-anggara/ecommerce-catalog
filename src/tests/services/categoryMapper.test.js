@@ -12,8 +12,8 @@ describe("toDisplay", () => {
   })
 
   test("should convert women clothing category to display name", () => {
-    expect(toDisplay(PRODUCT_CATEGORIES.WOMEN_CLOTHING)).toBe(
-      DISPLAY_CATEGORIES.WOMEN_CLOTHING
+    expect(toDisplay(PRODUCT_CATEGORIES.WOMENS_CLOTHING)).toBe(
+      DISPLAY_CATEGORIES.WOMENS_CLOTHING
     )
   })
 

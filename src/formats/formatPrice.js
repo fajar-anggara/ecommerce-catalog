@@ -1,4 +1,4 @@
-export const price = (apiPrice) => {
+export const getPrice = (apiPrice) => {
   if (typeof apiPrice !== "number" || isNaN(apiPrice)) {
     return "$0.00";
   }

@@ -4,14 +4,14 @@ describe("PRODUCT_CATEGORIES", () => {
   test("should contain correct keys and values", () => {
     expect(PRODUCT_CATEGORIES).toEqual({
       MENS_CLOTHING: "MENS_CLOTHING",
-      WOMEN_CLOTHING: "WOMEN_CLOTHING",
+      WOMENS_CLOTHING: "WOMENS_CLOTHING",
     });
   });
 
   test("should not contain unexpected categories", () => {
     expect(Object.keys(PRODUCT_CATEGORIES)).toEqual([
       "MENS_CLOTHING",
-      "WOMEN_CLOTHING",
+      "WOMENS_CLOTHING",
     ]);
   });
 });
@@ -20,7 +20,7 @@ describe("DISPLAY_CATEGORIES", () => {
   test("should contain all display categories including UNAVAILABLE", () => {
     expect(DISPLAY_CATEGORIES).toEqual({
       MENS_CLOTHING: "MENS_CLOTHING",
-      WOMEN_CLOTHING: "WOMEN_CLOTHING",
+      WOMENS_CLOTHING: "WOMENS_CLOTHING",
       UNAVAILABLE: "UNAVAILABLE",
     });
   });
